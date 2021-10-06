@@ -8,6 +8,7 @@ $(document).ready(function(){
     $("p").hide();
   });
 });
+
 </script>
 </head>
 <body>
@@ -20,22 +21,35 @@ $(document).ready(function(){
 <button>Click me</button>
 
 
-
 </body>
 <script>
-	/*
+/*
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://reqres.in/api/products/3", true);
 xhr.onload = function(){
     console.log(xhr.responseText);
+    var res = xhr.responseText;
+	$(function() { // After the HTML content loads
+	  var table = "<br/><br/><hr/><div>"+res+"</div>";
+
+	  $('body').append(table); // Appends HTML to an element
+	});
+
 };
 xhr.send();
-*/ 
+*/
+
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://pract1-developer-edition.ap24.force.com/OpenApi/services/apexrest/Account/", true);
 xhr.onload = function(){
     console.log(xhr.responseText);
-    document.write(xhr.responseText);
+	var res = xhr.responseText;
+	$(function() { // After the HTML content loads
+	  var table = "<br/><br/><hr/><div>"+res+"</div>";
+
+	  $('body').append(table); // Appends HTML to an element
+	});
+
 };
 xhr.send();
 </script>
