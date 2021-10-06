@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").hide();
+  });
+});
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+
+<button>Click me</button>
+
+
+
+</body>
+<script>
+	/*
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://reqres.in/api/products/3", true);
+xhr.onload = function(){
+    console.log(xhr.responseText);
+};
+xhr.send();
+*/ 
+var xhr = new XMLHttpRequest();
+xhr.open("GET", "https://pract1-developer-edition.ap24.force.com/OpenApi/services/apexrest/Account/", true);
+xhr.onload = function(){
+    console.log(xhr.responseText);
+    document.write(xhr.responseText);
+};
+xhr.send();
+</script>
+</html>
